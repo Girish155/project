@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 255, 255, 0.658);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to left,rgba(0, 0, 255, 0.699),rgba(255, 166, 0, 0.692));
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+.currency-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.currency-switcher label {
+    margin-right: 10px;
+}
+
+main {
+    text-align: center;
+}
+
+.pricing-toggle {
+    margin-bottom: 20px;
+}
+
+.pricing-toggle input[type="radio"] {
+    display: none;
+}
+
+.pricing-toggle label {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pricing-toggle input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(137, 43, 226, 0.678);
+}
+
+.card {
+    background-color: #ebd406cb;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 10px 0;
+}
+
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}

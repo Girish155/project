@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pricing Plans</h1>
+            <div class="currency-switcher">
+                <label for="currency">Currency:</label>
+                <select id="currency" onchange="updateCurrency()">
+                    <option value="Rs">Ind (Rs)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="£">GBP (£)</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <div class="pricing-toggle">
+                <input type="radio" id="monthly" name="billing" value="monthly" checked onclick="updatePricing()">
+                <label for="monthly">Monthly</label>
+                <input type="radio" id="yearly" name="billing" value="yearly" onclick="updatePricing()">
+                <label for="yearly">Yearly</label>
+            </div>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h2>Basic</h2>
+                    <p class="price" id="basic-price">$10<span class="unit">/mo</span></p>
+                    <ul>
+                        <li>5 Projects</li>
+                        <li>10 GB Storage</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+                <div class="card">
+                    <h2>Standard</h2>
+                    <p class="price" id="standard-price">$20<span class="unit">/mo</span></p>
+                    <ul>
+                        <li>10 Projects</li>
+                        <li>50 GB Storage</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+                <div class="card">
+                    <h2>Premium</h2>
+                    <p class="price" id="premium-price">$30<span class="unit">/mo</span></p>
+                    <ul>
+                        <li>Unlimited Projects</li>
+                        <li>200 GB Storage</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>
